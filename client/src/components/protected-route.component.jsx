@@ -9,7 +9,7 @@ import { setAllUsers, setUser, setAllChats } from '../redux/userSlice';
 import { getAllUsers, getCurrentUser } from '../api-calls/users';
 import { getAllChats } from '../api-calls/chats';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://chatapp-sitr.onrender.com/');
 // console.log(process.env)
 const ProtectedRoute = ({ children }) => {
     const navigate = useNavigate();

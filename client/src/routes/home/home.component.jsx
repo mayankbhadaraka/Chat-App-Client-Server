@@ -7,7 +7,7 @@ import ChatArea from './components/chat-area.component';
 import UsersList from './components/users-list.component';
 
 // moved to be global, because it did not work inside the "Home" arrow function
-const socket = io('http://localhost:5000');
+const socket = io('https://chatapp-sitr.onrender.com/');
 
 const Home = () => {
     const [searchKey, setSearchKey] = useState('');
