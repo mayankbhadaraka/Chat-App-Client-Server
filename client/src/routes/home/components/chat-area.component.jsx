@@ -279,7 +279,7 @@ const ChatArea = ({ socket }) => {
                     placeholder='Type a message'
                     className='w-[90%] border-0 h-full rounded-xl focus:border-none'
                 />
-                <button className='bg-primary text-white py-1 px-5 rounded h-max' onClick={() => sendNewMessage('')}>
+                <button className='bg-primary text-white py-1 px-5 rounded h-max' onClick={() =>newMessage.length>0 && sendNewMessage('')}>
                     <i className='ri-send-plane-2-line text-white'></i>
                 </button>
             </div>

@@ -15,14 +15,14 @@ app.use(
 
 // socket.io initialization
 const server = require('http').createServer(app);
-// const io = require('socket.io')(server, {
-//     cors: {
-//         origin: 'http://localhost:3000',
-//         methods: ['GET', 'POST']
-//     }
-// });
+const io = require('socket.io')(server, {
+    cors: {
+        origin: 'https://chatapp-sitr.onrender.com/',
+        methods: ['GET', 'POST']
+    }
+});
 
-const io = require('socket.io')(server);
+// const io = require('socket.io')(server);
 
 let onlineUsers = [];
 
@@ -89,5 +89,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 server.listen(port, () => {
-    console.log('listening on 5000');
+    console.log(`listening on ${port}`);
 });
